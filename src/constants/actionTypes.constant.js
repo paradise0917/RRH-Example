@@ -1,0 +1,3 @@
+export const ACTION_TYPES = {
+  UPDATE_LIGHTON: "UPDATE_LIGHTON"
+};
