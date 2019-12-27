@@ -5,14 +5,14 @@ export default class ChildComponent extends Component {
 
   static propTypes = {
     LightOn: PropTypes.bool,
-    dispatchCalculateBill: PropTypes.func
+    dispatchUpdateLightState: PropTypes.func
   }
   
   render(){
 
-    const { LightOn, dispatchCalculateBill } = this.props;
+    const { LightOn, dispatchUpdateLightState } = this.props;
     
-    return(<div onClick={dispatchCalculateBill}>
+    return(<div onClick={dispatchUpdateLightState}>
       {`Click to turn the light: ${LightOn}`}
     </div>);
   }

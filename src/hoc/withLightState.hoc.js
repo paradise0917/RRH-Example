@@ -14,7 +14,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
-      dispatchCalculateBill: createAction(ACTION_TYPES.UPDATE_LIGHTON)
+      dispatchUpdateLightState: createAction(ACTION_TYPES.UPDATE_LIGHTON)
     },
     dispatch
   );
@@ -30,11 +30,11 @@ export const withLightState = WrappedComponent => {
 
     render() {
 
-      const { LightOn, dispatchCalculateBill } = this.props;
+      const { LightOn, dispatchUpdateLightState } = this.props;
 
       return (<WrappedComponent
         LightOn={LightOn}
-        dispatchCalculateBill={dispatchCalculateBill}
+        dispatchUpdateLightState={dispatchUpdateLightState}
       />);
 
     }

@@ -8,15 +8,15 @@ export class _ParentComponent extends Component {
 
   static propTypes = {
     LightOn: PropTypes.bool,
-    dispatchCalculateBill: PropTypes.func
+    dispatchUpdateLightState: PropTypes.func
   }
 
   render() {
-    const { LightOn, dispatchCalculateBill } = this.props;
+    const { LightOn, dispatchUpdateLightState } = this.props;
     return (<div>
       <ChildComponent
         LightOn={LightOn}
-        dispatchCalculateBill={dispatchCalculateBill} />
+        dispatchUpdateLightState={dispatchUpdateLightState} />
     </div>);
   }
 }
